@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { ThemeProvider } from 'next-themes';
 
 import '../styles/globals.css';
+import NavBar from '@/components/nav-bar';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -24,8 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className={`${pretendard.variable} antialiased`}>{children}</body>
+    <html lang="ko" suppressHydrationWarning>
+      <body className={`${pretendard.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavBar />
+          <main className="container break-keep px-4 leading-relaxed text-gray-800 dark:text-gray-200">
+            <article className="py-7">{children}</article>
+          </main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
