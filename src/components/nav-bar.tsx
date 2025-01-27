@@ -17,16 +17,16 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="container flex items-center justify-between px-4">
+    <nav className="container flex items-center justify-between">
       <div className="flex items-center gap-6 py-6">
         {links.map(link => (
           <Link
             key={link.path}
             href={link.path}
             className={cn(
-              'transition-colors duration-300 hover:text-gray-900 dark:hover:text-gray-300',
+              'transition-colors duration-300 hover:text-gray-600 dark:hover:text-gray-300',
               pathname === link.path
-                ? 'font-semibold text-gray-800 dark:text-gray-200'
+                ? 'font-semibold text-gray-600 dark:text-gray-300'
                 : 'text-gray-400',
             )}
           >

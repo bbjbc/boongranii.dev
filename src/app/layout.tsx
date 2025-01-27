@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
-          <main className="container flex-1 break-keep leading-relaxed text-gray-800 dark:text-gray-200">
+          <main className="container flex-1 break-keep leading-relaxed text-gray-600 dark:text-gray-300">
             <article className="py-7">{children}</article>
           </main>
           <Footer />
