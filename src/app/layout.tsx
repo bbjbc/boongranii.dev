@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 
 import '../styles/globals.css';
 import NavBar from '@/components/nav-bar';
+import Footer from '@/components/footer';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -27,12 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className={`${pretendard.variable} antialiased`}>
+      <body
+        className={`${pretendard.variable} flex min-h-screen flex-col px-4 antialiased`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
-          <main className="container break-keep px-4 leading-relaxed text-gray-800 dark:text-gray-200">
+          <main className="container flex-1 break-keep leading-relaxed text-gray-800 dark:text-gray-200">
             <article className="py-7">{children}</article>
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
