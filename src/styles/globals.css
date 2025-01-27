@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-[class='dark'] {
+.dark {
   --background: #212121;
   --foreground: #ededed;
 }
