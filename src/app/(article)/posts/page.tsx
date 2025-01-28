@@ -1,9 +1,19 @@
+import { posts } from '~content';
+
+import Title from '@/components/title';
+import PostItem from '@/components/(article)/post-item';
+
 export default function Posts() {
   return (
-    <div>
-      <h1 className="text-grayy-800 text-lg font-extrabold dark:text-gray-200">
-        Posts
-      </h1>
-    </div>
+    <>
+      <header>
+        <Title>느린 생각, 긴 기록</Title>
+      </header>
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {posts.map(post => (
+          <PostItem key={post.slug} post={post} />
+        ))}
+      </ul>
+    </>
   );
 }
