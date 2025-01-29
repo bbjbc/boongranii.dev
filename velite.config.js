@@ -1,6 +1,12 @@
+import rehypeShiki from '@shikijs/rehype';
 import { defineConfig, s } from 'velite';
 
 export default defineConfig({
+  mdx: {
+    rehypePlugins: [
+      [rehypeShiki, { themes: { light: 'github-light', dark: 'github-dark' } }],
+    ],
+  },
   collections: {
     posts: {
       name: 'Post',
