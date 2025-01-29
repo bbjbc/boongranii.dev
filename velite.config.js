@@ -4,7 +4,7 @@ export default defineConfig({
   collections: {
     posts: {
       name: 'Post',
-      pattern: 'posts/**/*.md',
+      pattern: 'posts/**/*.mdx',
       schema: s
         .object({
           title: s.string(),
