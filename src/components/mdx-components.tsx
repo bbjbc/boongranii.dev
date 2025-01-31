@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import sharp from 'sharp';
+
 import type { MDXComponents } from 'mdx/types';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -69,16 +71,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </blockquote>
     ),
-    img: ({ src, alt, ...props }) => (
-      <Image
-        src={src}
-        alt={alt}
-        width={500}
-        height={300}
-        className="mb-6 rounded-md shadow-lg dark:shadow-gray-800"
-        {...props}
-      />
-    ),
+    img: async ({ src, alt, ...props }) => {
+      const imagePath = `${process.cwd()}/public${src}`;
+      const metadata = await sharp(imagePath).metadata();
+
+      return (
+        <Image
+          src={src}
+          alt={alt}
+          width={metadata.width}
+          height={metadata.height}
+          className="rounded-md shadow-lg dark:shadow-gray-800"
+          {...props}
+        />
+      );
+    },
     hr: props => (
       <hr className="my-6 border-gray-300 dark:border-gray-600" {...props} />
     ),
