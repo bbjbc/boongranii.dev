@@ -9,7 +9,8 @@ import Footer from '@/components/footer';
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
   variable: '--font-pretendard',
-  weight: '100 900',
+  weight: '45 920',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body
-        className={`${pretendard.variable} flex min-h-screen flex-col px-4 antialiased`}
+        className={`${pretendard.variable} font-pretendard flex min-h-screen flex-col px-4 antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
