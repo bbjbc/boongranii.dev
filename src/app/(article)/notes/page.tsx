@@ -1,9 +1,9 @@
+import Title from '@/components/title';
+
 export default function Notes() {
   return (
-    <div>
-      <h1 className="text-lg font-extrabold text-gray-800 dark:text-gray-200">
-        Notes
-      </h1>
-    </div>
+    <>
+      <Title>스치는 기록들</Title>
+    </>
   );
 }
