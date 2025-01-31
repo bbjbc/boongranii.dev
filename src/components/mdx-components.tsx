@@ -76,6 +76,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     img: async ({ src, alt, ...props }) => {
       const imagePath = `${process.cwd()}/public${src}`;
       const metadata = await sharp(imagePath).metadata();
+      const blurImage = await sharp(imagePath).resize(20, 20).blur().toBuffer();
+      const blurDataURL = `data:image/${metadata.format};base64,${blurImage.toString('base64')}`;
 
       return (
         <Image
@@ -84,6 +86,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           width={metadata.width}
           height={metadata.height}
           className="rounded-md shadow-lg dark:shadow-gray-800"
+          placeholder="blur"
+          blurDataURL={blurDataURL}
           {...props}
         />
       );
