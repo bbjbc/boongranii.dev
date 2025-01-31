@@ -16,6 +16,14 @@ const links = [
 const NavBar = () => {
   const pathname = usePathname();
 
+  const isActiveLink = (path: string) => {
+    if (path === ROUTER_PATH.POSTS.PATH || path === ROUTER_PATH.NOTES.PATH) {
+      return pathname.startsWith(path);
+    }
+
+    return pathname === path;
+  };
+
   return (
     <nav className="container flex items-center justify-between">
       <div className="flex items-center gap-6 py-6">
@@ -25,7 +33,7 @@ const NavBar = () => {
             href={link.path}
             className={cn(
               'transition-colors duration-300 hover:text-gray-600 dark:hover:text-gray-300',
-              pathname === link.path
+              isActiveLink(link.path)
                 ? 'font-semibold text-gray-600 dark:text-gray-300'
                 : 'text-gray-400',
             )}
