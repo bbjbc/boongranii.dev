@@ -2,6 +2,7 @@ import Image from 'next/image';
 import sharp from 'sharp';
 
 import type { MDXComponents } from 'mdx/types';
+import Pre from './pre';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -63,6 +64,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {...props}
       />
     ),
+    pre: props => <Pre {...props} />,
     blockquote: ({ children, ...props }) => (
       <blockquote
         className="mb-4 border-l-4 border-gray-600 py-2 pl-4 font-semibold italic text-black dark:border-gray-300 dark:text-white [&>p]:mb-0"
