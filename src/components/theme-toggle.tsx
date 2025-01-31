@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { IoSunnyOutline, IoMoonOutline } from 'react-icons/io5';
 
+import Button from './button';
+
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -14,16 +16,10 @@ const ThemeToggle = () => {
   if (!mounted) return null;
 
   return (
-    <button
+    <Button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
-    >
-      {theme === 'dark' ? (
-        <IoSunnyOutline size={18} />
-      ) : (
-        <IoMoonOutline size={18} />
-      )}
-    </button>
+      icon={theme === 'dark' ? <IoSunnyOutline /> : <IoMoonOutline />}
+    />
   );
 };
 
