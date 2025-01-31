@@ -1,0 +1,71 @@
+---
+title: MDX 스타일링 예시
+subTitle: MDX components에서의 스타일링을 확인하는 글
+image: './image1.png'
+slug: mdx-styling-example
+date: 2025-01-30 00:25
+---
+
+# h1
+
+블로그를 꾸미기 위한 MDX 컴포넌트들의 스타일링 예시 살펴보기
+
+## h2
+
+h2 테스트
+
+### h3
+
+h3 테스트
+
+## 텍스트 스타일링
+
+p 테스트
+
+## 링크
+
+링크는 [dual-themes](https://shiki.style/guide/dual-themes) 표시돼요.
+
+## 인라인 코드
+
+그리고 인라인 `코드`는 이런 식으로 보여요.
+
+## 목록 스타일링
+
+순서가 없는 목록:
+
+- 일반 리스트 1
+- 일반 리스트 2
+  순서가 있는 목록:
+
+1. 첫 번째 순서
+2. 두 번째 순서
+3. 세 번째 순서
+
+## 인용구
+
+> 인용구 테스트
+>
+> by Boongranii
+
+## 이미지
+
+![image1](./image1.png)
+
+---
+
+## 코드 블록 예시
+
+```css
+@media (prefers-color-scheme: dark) {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    /* Optional, if you also want font styles */
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
+```
