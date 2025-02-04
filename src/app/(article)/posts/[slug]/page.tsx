@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { posts } from '~content';
+import { getSortedPosts } from '@/data/data-accessor';
 import { MDXContent } from '@/components/mdx-content';
 import Title from '@/components/title';
 import Description from '@/components/description';
@@ -9,6 +9,8 @@ import ArticleMetadata from '@/components/(article)/article-metadata';
 interface Params {
   params: Promise<{ slug: string }>;
 }
+
+const posts = getSortedPosts();
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params;

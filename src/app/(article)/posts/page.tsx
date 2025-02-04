@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 
-import { posts } from '~content';
-
+import { getSortedPosts } from '@/data/data-accessor';
 import Title from '@/components/title';
 import PostItem from '@/components/(article)/post-item';
 
@@ -12,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function Posts() {
+  const posts = getSortedPosts();
+
   return (
     <>
       <header>
