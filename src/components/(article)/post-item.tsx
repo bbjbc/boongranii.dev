@@ -24,10 +24,7 @@ const PostItem = ({ post }: { post: TPost }) => {
             </p>
           </div>
 
-          <ArticleMetadata
-            date={post.date}
-            readingTime={post.metadata.readingTime}
-          />
+          <ArticleMetadata date={post.date} readingTime={post.readingTime} />
         </article>
       </Link>
     </li>

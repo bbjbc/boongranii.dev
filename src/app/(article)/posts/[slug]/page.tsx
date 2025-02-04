@@ -42,10 +42,7 @@ export default async function Post({ params }: Params) {
       <header className="mb-12">
         <Title>{post.title}</Title>
         <Description>{post.subTitle}</Description>
-        <ArticleMetadata
-          date={post.date}
-          readingTime={post.metadata.readingTime}
-        />
+        <ArticleMetadata date={post.date} readingTime={post.readingTime} />
       </header>
 
       <MDXContent code={post.code} />
