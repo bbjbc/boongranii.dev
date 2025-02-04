@@ -3,36 +3,37 @@ import sharp from 'sharp';
 
 import type { MDXComponents } from 'mdx/types';
 import Pre from './pre';
+import Heading from './heading';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
-    h1: ({ children, ...props }) => (
-      <h1
-        className="mb-4 text-2xl font-extrabold tracking-tight text-black dark:text-white sm:text-3xl"
-        {...props}
+    h1: ({ children }) => (
+      <Heading
+        as="h1"
+        className="mb-4 pt-10 text-2xl font-semibold text-black dark:text-white sm:text-3xl"
       >
         {children}
-      </h1>
+      </Heading>
     ),
-    h2: ({ children, ...props }) => (
-      <h2
-        className="mb-3 text-xl font-extrabold text-black dark:text-white sm:text-2xl"
-        {...props}
+    h2: ({ children }) => (
+      <Heading
+        as="h2"
+        className="mb-4 pt-10 text-xl font-semibold text-black dark:text-white sm:text-2xl"
       >
         {children}
-      </h2>
+      </Heading>
     ),
-    h3: ({ children, ...props }) => (
-      <h3
-        className="{...props} mb-2 text-lg font-extrabold text-black dark:text-white sm:text-xl"
-        {...props}
+    h3: ({ children }) => (
+      <Heading
+        as="h3"
+        className="mb-4 pt-10 text-lg font-semibold text-black dark:text-white sm:text-xl"
       >
         {children}
-      </h3>
+      </Heading>
     ),
     p: ({ children, ...props }) => (
-      <p className="{...props} mb-4 text-base" {...props}>
+      <p className="mb-4" {...props}>
         {children}
       </p>
     ),
@@ -60,14 +61,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     code: props => (
       <code
-        className="rounded-md bg-gray-200 px-1.5 py-0.5 dark:bg-gray-700"
+        className="rounded-md bg-gray-200 px-1 py-0.5 dark:bg-gray-700"
         {...props}
       />
     ),
     pre: props => <Pre {...props} />,
     blockquote: ({ children, ...props }) => (
       <blockquote
-        className="mb-4 border-l-4 border-gray-600 py-2 pl-4 font-semibold italic text-black dark:border-gray-300 dark:text-white [&>p]:mb-0"
+        className="mb-4 border-l-4 border-gray-600 py-2 pl-4 italic text-black dark:border-gray-300 dark:text-white [&>p]:mb-0"
         {...props}
       >
         {children}
@@ -85,7 +86,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           alt={alt}
           width={metadata.width}
           height={metadata.height}
-          className="rounded-md shadow-lg dark:shadow-gray-800"
+          className="mb-4 rounded-md shadow-lg dark:shadow-gray-800"
           placeholder="blur"
           blurDataURL={blurDataURL}
           {...props}

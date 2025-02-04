@@ -17,6 +17,10 @@ body {
   background: var(--background);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .shiki {
   border: 1px solid #d1d5db;
   overflow: auto;
