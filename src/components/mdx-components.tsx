@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import sharp from 'sharp';
 
 import type { MDXComponents } from 'mdx/types';
 import Pre from './pre';
 import Heading from './heading';
+import { getImageMetadata } from '@/app/utils/image-metadata';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -75,20 +75,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </blockquote>
     ),
     img: async ({ src, alt, ...props }) => {
-      const imagePath = `${process.cwd()}/public${src}`;
-      const metadata = await sharp(imagePath).metadata();
-      const blurImage = await sharp(imagePath).resize(20, 20).blur().toBuffer();
-      const blurDataURL = `data:image/${metadata.format};base64,${blurImage.toString('base64')}`;
+      const metadata = await getImageMetadata(src, 640);
 
       return (
         <Image
-          src={src}
+          src={metadata.src}
           alt={alt}
           width={metadata.width}
           height={metadata.height}
-          className="mb-4 rounded-md shadow-lg dark:shadow-gray-800"
+          className="mb-8 w-full rounded-md shadow-lg dark:shadow-gray-800"
           placeholder="blur"
-          blurDataURL={blurDataURL}
+          blurDataURL={metadata.blurDataURL}
           {...props}
         />
       );
