@@ -29,7 +29,7 @@ export default defineConfig({
         })
         .transform(data => ({
           ...data,
-          permalink: `/post/${data.slug}`,
+          permalink: `/posts/${data.slug}`,
           readingTime: getReadingTime(data.content),
         })),
     },
