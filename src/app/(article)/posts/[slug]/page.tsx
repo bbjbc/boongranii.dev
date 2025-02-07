@@ -5,6 +5,7 @@ import { MDXContent } from '@/components/mdx-content';
 import Title from '@/components/title';
 import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
+import ContentNavigation from '@/components/(article)/content-navigation';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -39,6 +40,9 @@ export default async function Post({ params }: Params) {
 
   if (!post) notFound();
 
+  const prevPost = posts[posts.indexOf(post) - 1];
+  const nextPost = posts[posts.indexOf(post) + 1];
+
   return (
     <article className="container">
       <header className="mb-12">
@@ -48,6 +52,8 @@ export default async function Post({ params }: Params) {
       </header>
 
       <MDXContent code={post.code} />
+
+      <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
     </article>
   );
 }
