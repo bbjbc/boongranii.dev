@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { getSortedPosts } from '@/data/data-accessor';
 import { MDXContent } from '@/components/mdx-content';
 import { extractHeadings } from '@/app/utils/extract-headings';
+import { getImageMetadata } from '@/app/utils/image-metadata';
 import Title from '@/components/title';
 import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
@@ -45,6 +47,9 @@ export default async function Post({ params }: Params) {
   const prevPost = posts[posts.indexOf(post) - 1];
   const nextPost = posts[posts.indexOf(post) + 1];
 
+  const imgMetadata = post.image
+    ? await getImageMetadata(post.image.src, 640)
+    : null;
   const headings = extractHeadings(post.content);
 
   return (
@@ -62,6 +67,17 @@ export default async function Post({ params }: Params) {
           <ArticleMetadata date={post.date} readingTime={post.readingTime} />
         </header>
 
+        {imgMetadata && (
+          <Image
+            src={imgMetadata.src}
+            alt={post.title}
+            width={imgMetadata.width}
+            height={imgMetadata.height}
+            className="mb-8 w-full rounded-md shadow-lg dark:shadow-gray-800"
+            placeholder="blur"
+            blurDataURL={imgMetadata.blurDataURL}
+          />
+        )}
         <MDXContent code={post.code} />
 
         <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
