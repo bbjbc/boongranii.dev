@@ -1,5 +1,7 @@
 import { FiLink } from 'react-icons/fi';
 
+import { generateId } from '@/app/utils/generate-id';
+
 interface HeadingProps {
   as: 'h1' | 'h2' | 'h3';
   children: React.ReactNode;
@@ -7,10 +9,7 @@ interface HeadingProps {
 }
 
 const Heading = ({ as: Component, children, className }: HeadingProps) => {
-  const id =
-    typeof children === 'string'
-      ? children.toLowerCase().replace(/\s/g, '-')
-      : undefined;
+  const id = generateId(children);
 
   return (
     <Component id={id} className={className}>
