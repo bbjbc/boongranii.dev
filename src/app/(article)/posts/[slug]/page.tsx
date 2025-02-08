@@ -2,10 +2,12 @@ import { notFound } from 'next/navigation';
 
 import { getSortedPosts } from '@/data/data-accessor';
 import { MDXContent } from '@/components/mdx-content';
+import { extractHeadings } from '@/app/utils/extract-headings';
 import Title from '@/components/title';
 import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
+import TableOfContents from '@/components/toc';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -43,17 +45,27 @@ export default async function Post({ params }: Params) {
   const prevPost = posts[posts.indexOf(post) - 1];
   const nextPost = posts[posts.indexOf(post) + 1];
 
+  const headings = extractHeadings(post.content);
+
   return (
-    <article className="container">
-      <header className="mb-12">
-        <Title>{post.title}</Title>
-        <Description>{post.subTitle}</Description>
-        <ArticleMetadata date={post.date} readingTime={post.readingTime} />
-      </header>
+    <div className="relative">
+      <aside className="hidden xl:block">
+        <div className="fixed right-[calc(60vw-640px-8rem)] top-[100px] w-56">
+          <TableOfContents headings={headings} />
+        </div>
+      </aside>
 
-      <MDXContent code={post.code} />
+      <article className="container">
+        <header className="mb-12">
+          <Title>{post.title}</Title>
+          <Description>{post.subTitle}</Description>
+          <ArticleMetadata date={post.date} readingTime={post.readingTime} />
+        </header>
 
-      <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
-    </article>
+        <MDXContent code={post.code} />
+
+        <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
+      </article>
+    </div>
   );
 }
