@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
+import { Toaster } from 'sonner';
 
 import '../styles/globals.css';
 import NavBar from '@/components/nav-bar';
@@ -30,9 +31,18 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body
-        className={`${pretendard.variable} font-pretendard flex min-h-screen flex-col px-4 antialiased`}
+        className={`${pretendard.variable} flex min-h-screen flex-col px-4 font-pretendard antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              classNames: {
+                toast:
+                  'font-pretendard dark:text-gray-300 dark:bg-gray-800 dark:border-gray-300',
+              },
+            }}
+          />
           <NavBar />
           <main className="container flex-1 break-keep leading-relaxed text-gray-600 dark:text-gray-300">
             <article className="py-7">{children}</article>
