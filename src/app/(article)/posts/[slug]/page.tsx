@@ -55,7 +55,7 @@ export default async function Post({ params }: Params) {
   return (
     <div className="relative">
       <aside className="hidden xl:block">
-        <div className="fixed right-[calc(60vw-640px-8rem)] top-[100px] w-56">
+        <div className="xl:fixed xl:right-[calc(60vw-640px-8rem)] xl:top-[100px] xl:w-56">
           <TableOfContents headings={headings} />
         </div>
       </aside>
@@ -66,6 +66,10 @@ export default async function Post({ params }: Params) {
           <Description>{post.subTitle}</Description>
           <ArticleMetadata date={post.date} readingTime={post.readingTime} />
         </header>
+
+        <div className="mb-8 xl:hidden">
+          <TableOfContents headings={headings} />
+        </div>
 
         {imgMetadata && (
           <Image
