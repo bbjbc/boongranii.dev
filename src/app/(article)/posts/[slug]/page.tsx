@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { getSortedPosts } from '@/data/data-accessor';
-import { MDXContent } from '@/components/mdx-content';
+import { MDXContent } from '@/components/mdx/mdx-content';
 import { extractHeadings } from '@/app/utils/extract-headings';
 import { getImageMetadata } from '@/app/utils/image-metadata';
 import Title from '@/components/title';

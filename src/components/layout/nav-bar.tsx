@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import ThemeToggle from './theme-toggle';
-import { ROUTER_PATH } from '../constants/path';
+import ThemeToggle from '../common/theme-toggle';
+import { ROUTER_PATH } from '../../constants/path';
 import { cn } from '@/app/utils/cn';
 
 const links = [

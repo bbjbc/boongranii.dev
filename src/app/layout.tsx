@@ -4,8 +4,8 @@ import { ThemeProvider } from 'next-themes';
 import { Toaster } from 'sonner';
 
 import '../styles/globals.css';
-import NavBar from '@/components/nav-bar';
-import Footer from '@/components/footer';
+import NavBar from '@/components/layout/nav-bar';
+import Footer from '@/components/layout/footer';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',

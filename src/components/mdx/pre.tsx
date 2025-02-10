@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 
 import { IoClipboardOutline } from 'react-icons/io5';
 import { IoCheckmarkDoneOutline } from 'react-icons/io5';
-import Button from './button';
+import Button from '../button';
 
 interface PreProps {
   children?: React.ReactNode;

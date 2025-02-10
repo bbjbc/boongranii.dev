@@ -3,7 +3,7 @@ import Title from '@/components/title';
 export default function Home() {
   return (
     <>
-      <Title>Boogranii</Title>
+      <Title>Boongranii</Title>
     </>
   );
 }
