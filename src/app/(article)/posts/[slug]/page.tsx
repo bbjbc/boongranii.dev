@@ -10,6 +10,7 @@ import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
 import TableOfContents from '@/components/toc';
+import FloatingButton from '@/components/common/floating-button';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -83,8 +84,8 @@ export default async function Post({ params }: Params) {
           />
         )}
         <MDXContent code={post.code} />
-
         <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
+        <FloatingButton />
       </article>
     </div>
   );
