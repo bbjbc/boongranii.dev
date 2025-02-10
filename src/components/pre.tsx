@@ -38,7 +38,7 @@ const Pre = ({ children, ...props }: PreProps) => {
             <IoClipboardOutline />
           )
         }
-        className="absolute right-2 top-2 bg-white opacity-0 group-hover:opacity-100 dark:bg-gray-700"
+        className="absolute right-2 top-2 opacity-0 group-hover:opacity-100"
       />
       <pre ref={preRef} {...props}>
         {children}

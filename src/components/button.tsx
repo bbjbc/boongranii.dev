@@ -18,7 +18,7 @@ const Button = ({
   const variantStyles = {
     default: 'hover:bg-gray-100 dark:hover:bg-gray-800',
     outline:
-      'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800',
+      'border border-gray-300 dark:border-gray-600 bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-gray-800',
   };
   const combinedStyles = cn(baseStyles, variantStyles[variant], className);
 
