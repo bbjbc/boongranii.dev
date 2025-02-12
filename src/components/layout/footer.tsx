@@ -34,8 +34,6 @@ const Footer = () => {
           <a
             href={GMAIL_URL}
             className="text-gray-600 transition-colors duration-300 hover:text-black dark:text-gray-300 dark:hover:text-gray-100"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <CiMail size={20} />
           </a>
