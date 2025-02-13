@@ -6,7 +6,7 @@ import ArticleMetadata from './article-metadata';
 
 const PostItem = ({ post }: { post: TPost }) => {
   return (
-    <li key={post.slug} className="group">
+    <li className="group">
       <Link
         href={`/posts/${post.slug}`}
         className="block overflow-hidden rounded-lg border border-gray-300 shadow-sm transition-all duration-300 hover:border-gray-800 hover:bg-gray-100/60 hover:shadow-md dark:border-gray-700 dark:hover:border-gray-200 dark:hover:bg-gray-600/30"
