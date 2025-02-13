@@ -17,7 +17,7 @@ const ContnetNavigationItem = ({
   type,
   content,
 }: ContentNavigationItemProps) => {
-  if (!content) return <div />;
+  if (!content) return null;
 
   return (
     <Link
@@ -40,6 +40,14 @@ const ContentNavigation = ({
   prevContent,
   nextContent,
 }: ContentNavigationProps) => {
+  if (!prevContent && !nextContent) {
+    return (
+      <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-500 dark:border-gray-700 dark:text-gray-400">
+        이전/다음 글이 존재하지 않습니다.
+      </div>
+    );
+  }
+
   return (
     <div className="mt-8 grid grid-cols-2 gap-4 border-t border-gray-200 pt-8 dark:border-gray-700">
       <div className="col-start-1">
