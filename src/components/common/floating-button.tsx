@@ -3,7 +3,6 @@
 import { useState, useCallback } from 'react';
 
 import { LuShipWheel } from 'react-icons/lu';
-import { cn } from '@/app/utils/cn';
 
 import Button from '../button';
 import BackButton from './back-button';
@@ -11,6 +10,7 @@ import CopyLinkButton from './copy-link-button';
 import ScrollToTopButton from './scroll-to-top-button';
 import ScrollToCommentButton from './scroll-to-comment-button';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
+import { cn } from '@/utils/cn';
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);

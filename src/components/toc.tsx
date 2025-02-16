@@ -1,7 +1,7 @@
 'use client';
 
 import { useHeadingObserver } from '@/hooks/useHeadingObserver';
-import { cn } from '@/app/utils/cn';
+import { cn } from '@/utils/cn';
 import ScrollToTopButton from './common/scroll-to-top-button';
 import CopyLinkButton from './common/copy-link-button';
 import BackButton from './common/back-button';

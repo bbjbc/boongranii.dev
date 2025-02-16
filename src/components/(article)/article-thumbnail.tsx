@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { getImageMetadata } from '@/app/utils/image-metadata';
+import { getImageMetadata } from '@/utils/image-metadata';
 
 interface ArticleThumbnailProps {
   image: string;

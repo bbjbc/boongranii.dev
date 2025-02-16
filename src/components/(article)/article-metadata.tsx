@@ -1,6 +1,6 @@
 import { CiStopwatch } from 'react-icons/ci';
 
-import { formatDate } from '@/app/utils/format-date';
+import { formatDate } from '@/utils/format-date';
 
 interface ArticleMetadataProps {
   date: string;

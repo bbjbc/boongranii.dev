@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Title from '../title';
 import SocialLinks from './social-links';
-import aboutImg from '@/app/assets/about.jpg';
+import aboutImg from '@/assets/about.jpg';
 
 interface ProfileHeaderProps {
   name: string;

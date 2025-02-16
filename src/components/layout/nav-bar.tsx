@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import ThemeToggle from '../common/theme-toggle';
 import { ROUTER_PATH } from '../../constants/path';
-import { cn } from '@/app/utils/cn';
+import { cn } from '@/utils/cn';
 
 const links = [
   { label: ROUTER_PATH.HOME.LABEL, path: ROUTER_PATH.HOME.PATH },

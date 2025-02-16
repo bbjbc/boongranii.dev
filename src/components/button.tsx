@@ -1,4 +1,4 @@
-import { cn } from '@/app/utils/cn';
+import { cn } from '@/utils/cn';
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;

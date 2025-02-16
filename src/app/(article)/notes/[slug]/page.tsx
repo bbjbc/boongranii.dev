@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 
 import { getSortedNotes } from '@/data/data-accessor';
 import { MDXContent } from '@/components/mdx/mdx-content';
-import { extractHeadings } from '@/app/utils/extract-headings';
-import { getImageMetadata } from '@/app/utils/image-metadata';
+import { extractHeadings } from '@/utils/extract-headings';
+import { getImageMetadata } from '@/utils/image-metadata';
 import TableOfContents from '@/components/toc';
 import Title from '@/components/title';
 import ArticleMetadata from '@/components/(article)/article-metadata';

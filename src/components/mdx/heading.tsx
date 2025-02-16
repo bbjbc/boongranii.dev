@@ -1,6 +1,6 @@
 import { FiLink } from 'react-icons/fi';
 
-import { generateId } from '@/app/utils/generate-id';
+import { generateId } from '@/utils/generate-id';
 
 interface HeadingProps {
   as: 'h1' | 'h2' | 'h3';
