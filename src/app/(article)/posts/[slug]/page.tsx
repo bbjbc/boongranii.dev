@@ -9,6 +9,7 @@ import Title from '@/components/title';
 import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
+import Giscus from '@/components/(article)/giscus';
 import TableOfContents from '@/components/toc';
 import FloatingButton from '@/components/common/floating-button';
 
@@ -84,7 +85,11 @@ export default async function Post({ params }: Params) {
           />
         )}
         <MDXContent code={post.code} />
-        <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
+
+        <footer className="flex flex-col gap-12">
+          <ContentNavigation prevContent={prevPost} nextContent={nextPost} />
+          <Giscus />
+        </footer>
         <FloatingButton />
       </article>
     </div>

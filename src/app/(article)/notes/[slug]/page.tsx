@@ -9,6 +9,7 @@ import TableOfContents from '@/components/toc';
 import Title from '@/components/title';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
+import Giscus from '@/components/(article)/giscus';
 import FloatingButton from '@/components/common/floating-button';
 
 interface Params {
@@ -80,7 +81,11 @@ export default async function Note({ params }: Params) {
           />
         )}
         <MDXContent code={note.code} />
-        <ContentNavigation prevContent={prevNote} nextContent={nextNote} />
+
+        <footer className="flex flex-col gap-12">
+          <ContentNavigation prevContent={prevNote} nextContent={nextNote} />
+          <Giscus />
+        </footer>
         <FloatingButton />
       </article>
     </div>
