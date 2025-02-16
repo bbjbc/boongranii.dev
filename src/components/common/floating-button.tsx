@@ -9,7 +9,7 @@ import BackButton from './back-button';
 import CopyLinkButton from './copy-link-button';
 import ScrollToTopButton from './scroll-to-top-button';
 import ScrollToCommentButton from './scroll-to-comment-button';
-import { useOutsideClick } from '@/hooks/useOutsideClick';
+import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/utils/cn';
 
 const FloatingButton = () => {
