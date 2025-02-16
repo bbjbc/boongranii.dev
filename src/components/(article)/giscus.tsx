@@ -42,7 +42,7 @@ const Giscus = () => {
       'iframe.giscus-frame',
     );
     iframe?.contentWindow?.postMessage(
-      { giscus: { theme } },
+      { giscus: { setConfig: { theme } } },
       'https://giscus.app',
     );
   }, [theme]);
