@@ -1,7 +1,9 @@
 import { VscGithubAlt } from 'react-icons/vsc';
+import { FaLinkedin } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 
-import { GITHUB_URL, GMAIL_URL } from '@/constants/path';
+import { GITHUB_URL, GMAIL_URL, LINKEDIN_URL } from '@/constants/path';
+import Button from '../button';
 
 const Footer = () => {
   return (
@@ -23,19 +25,20 @@ const Footer = () => {
 
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <a
-            href={GITHUB_URL}
-            className="text-gray-600 transition-colors duration-300 hover:text-black dark:text-gray-300 dark:hover:text-gray-100"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <VscGithubAlt size={20} />
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" className="p-0">
+              <VscGithubAlt size={20} />
+            </Button>
           </a>
-          <a
-            href={GMAIL_URL}
-            className="text-gray-600 transition-colors duration-300 hover:text-black dark:text-gray-300 dark:hover:text-gray-100"
-          >
-            <CiMail size={20} />
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" className="p-0">
+              <FaLinkedin size={20} />
+            </Button>
+          </a>
+          <a href={GMAIL_URL}>
+            <Button variant="ghost" className="p-0">
+              <CiMail size={20} />
+            </Button>
           </a>
         </div>
 

@@ -3,7 +3,7 @@ import { cn } from '@/app/utils/cn';
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'outline';
+  variant?: 'default' | 'ghost' | 'outline';
 }
 
 const Button = ({
@@ -17,6 +17,7 @@ const Button = ({
     'rounded-md p-2 text-gray-600 transition-all duration-300 dark:text-gray-300';
   const variantStyles = {
     default: 'hover:bg-gray-100 dark:hover:bg-gray-800',
+    ghost: 'hover:text-black dark:hover:text-gray-100',
     outline:
       'border border-gray-300 dark:border-gray-600 bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-gray-800',
   };
