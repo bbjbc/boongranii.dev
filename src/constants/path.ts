@@ -7,3 +7,5 @@ export const ROUTER_PATH = {
 export const GITHUB_URL = 'https://github.com/bbjbc';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/bbjbc/';
 export const GMAIL_URL = 'mailto:jobc4550@gmail.com';
+
+export const BLOG_URL = 'https://www.boongranii.dev';

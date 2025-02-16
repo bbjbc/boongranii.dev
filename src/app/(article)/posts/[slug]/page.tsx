@@ -31,6 +31,10 @@ export async function generateMetadata({ params }: Params) {
     openGraph: {
       title: post.title,
       description: post.subTitle,
+      siteName: 'Boongranii',
+      images: {
+        url: post.image?.src,
+      },
       type: 'article',
     },
   };

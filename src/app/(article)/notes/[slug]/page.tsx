@@ -28,6 +28,10 @@ export async function generateMetadata({ params }: Params) {
     title: note.title,
     openGraph: {
       title: note.title,
+      siteName: 'Boongranii',
+      images: {
+        url: note.image?.src,
+      },
       type: 'article',
     },
   };

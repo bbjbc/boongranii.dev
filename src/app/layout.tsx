@@ -6,6 +6,8 @@ import { Toaster } from 'sonner';
 import '../styles/globals.css';
 import NavBar from '@/components/layout/nav-bar';
 import Footer from '@/components/layout/footer';
+import { BLOG_URL } from '@/constants/path';
+import opengraphImg from '@/assets/opengraph-image.png';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -21,6 +23,15 @@ export const metadata: Metadata = {
   },
   description: "Boongranii's Devlog",
   creator: 'Boongranii',
+  metadataBase: new URL(BLOG_URL),
+  openGraph: {
+    type: 'website',
+    locale: 'ko_KR',
+    images: {
+      url: opengraphImg.src,
+    },
+    siteName: 'Boongranii',
+  },
 };
 
 export default function RootLayout({
