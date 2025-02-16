@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from 'sonner';
@@ -44,6 +46,8 @@ export default function RootLayout({
       <body
         className={`${pretendard.variable} flex min-h-screen flex-col px-4 font-pretendard antialiased`}
       >
+        <Analytics />
+        <SpeedInsights />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Toaster
             position="top-center"
