@@ -47,7 +47,7 @@ const Giscus = () => {
     );
   }, [theme]);
 
-  return <section ref={ref} />;
+  return <section ref={ref} id="giscus-comment" />;
 };
 
 export default Giscus;

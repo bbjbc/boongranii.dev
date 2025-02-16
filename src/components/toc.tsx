@@ -5,6 +5,7 @@ import { cn } from '@/app/utils/cn';
 import ScrollToTopButton from './common/scroll-to-top-button';
 import CopyLinkButton from './common/copy-link-button';
 import BackButton from './common/back-button';
+import ScrollToCommentButton from './common/scroll-to-comment-button';
 
 interface TOCItem {
   id: string;
@@ -57,6 +58,7 @@ const TableOfContents = ({ headings }: TOCProps) => {
       <div className="hidden xl:flex xl:gap-2">
         <BackButton />
         <ScrollToTopButton />
+        <ScrollToCommentButton />
         <CopyLinkButton />
       </div>
     </div>

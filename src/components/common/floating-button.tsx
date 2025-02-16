@@ -9,6 +9,7 @@ import Button from '../button';
 import BackButton from './back-button';
 import CopyLinkButton from './copy-link-button';
 import ScrollToTopButton from './scroll-to-top-button';
+import ScrollToCommentButton from './scroll-to-comment-button';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
 
 const FloatingButton = () => {
@@ -38,6 +39,7 @@ const FloatingButton = () => {
       >
         <BackButton size={22} />
         <CopyLinkButton size={22} />
+        <ScrollToCommentButton size={22} />
         <ScrollToTopButton size={22} />
       </div>
 
