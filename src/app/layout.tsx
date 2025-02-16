@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Toaster
-            position="bottom-right"
+            position="top-center"
             toastOptions={{
               classNames: {
                 toast:
