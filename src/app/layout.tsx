@@ -8,6 +8,7 @@ import { Toaster } from 'sonner';
 import '../styles/globals.css';
 import NavBar from '@/components/layout/nav-bar';
 import Footer from '@/components/layout/footer';
+import GoogleAnalytics from '@/components/common/google-analytics';
 import { BLOG_URL } from '@/constants/path';
 import opengraphImg from '@/assets/opengraph-image.png';
 
@@ -48,6 +49,9 @@ export default function RootLayout({
       >
         <Analytics />
         <SpeedInsights />
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        )}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Toaster
             position="top-center"
