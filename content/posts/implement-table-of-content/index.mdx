@@ -1,7 +1,7 @@
 ---
 title: Next 블로그에 Table of Content 구현하기
 subTitle: 블로그에 목차 구현하기
-image: './image1.png'
+image: './image1.webp'
 slug: implement-table-of-content
 date: 2025-02-08
 ---
@@ -57,7 +57,7 @@ export default Heading;
 사실 이 컴포넌트는 포스팅 내부에서 헤딩을 클릭 시 해당 섹션으로 스크롤되도록 제작했다. 이제 이 헤딩에는 고유 ID가 부여되며, 이 ID를 이용해 목차의 앵커 링크를 생성한다.
 `children`은 헤딩에 해당하는 텍스트가 된다.
 
-![image4](./image4.png)
+![image4](./image4.webp)
 
 고유 ID가 부여된 헤딩의 사진이다.
 
@@ -86,7 +86,7 @@ export function generateId(text: string | React.ReactNode): string | undefined {
 
 MDX 컨텐츠에서 헤딩을 추출해야 한다. 해당 글에서 velite가 반환하는 `content`를 사용해 헤딩을 추출해야 한다.
 
-![image2](./image2.png)
+![image2](./image2.webp)
 
 위는 해당 포스팅에서 `content`를 출력한 것이다. 보면 `h1`, `h2`, `h3` 태그가 포함되어 있다. 이를 추출하는 함수를 작성해보자.
 
@@ -118,7 +118,7 @@ export const extractHeadings = (
 
 이 함수는 `content`에서 각 헤딩딩 태그를 추출해 `id`, `text`, `level`을 반환한다.
 
-![image3](./image3.png)
+![image3](./image3.webp)
 
 결과값을 추출해서 확인하면 위처럼 결과가 나온다.
 
