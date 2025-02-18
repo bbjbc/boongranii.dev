@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     },
     siteName: 'Boongranii',
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
