@@ -1,5 +1,8 @@
-import rehypeShiki from '@shikijs/rehype';
 import { defineConfig, s } from 'velite';
+import rehypeShiki from '@shikijs/rehype';
+import remarkDirective from 'remark-directive';
+
+import { remarkCallout } from '@/lib/remark-callout';
 
 const getReadingTime = (content: string): number => {
   return Math.max(Math.floor(content.split(' ').length / 150), 1);
@@ -10,6 +13,7 @@ export default defineConfig({
     rehypePlugins: [
       [rehypeShiki, { themes: { light: 'github-light', dark: 'github-dark' } }],
     ],
+    remarkPlugins: [remarkDirective, remarkCallout],
   },
   collections: {
     posts: {
