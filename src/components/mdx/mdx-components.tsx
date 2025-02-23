@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { MDXComponents } from 'mdx/types';
 import Pre from './pre';
 import Heading from './heading';
+import Callout from './callout';
 import { getImageMetadata } from '@/utils/image-metadata';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -93,5 +94,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     hr: props => (
       <hr className="my-6 border-gray-300 dark:border-gray-600" {...props} />
     ),
+    Callout,
   };
 }
