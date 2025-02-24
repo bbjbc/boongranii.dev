@@ -1,7 +1,8 @@
+import { Root } from 'mdast';
 import { visit } from 'unist-util-visit';
 
 export const remarkCallout = () => {
-  return tree => {
+  return (tree: Root) => {
     visit(tree, node => {
       if (
         node.type === 'containerDirective' ||
@@ -29,6 +30,6 @@ export const remarkCallout = () => {
   };
 };
 
-const isValidCalloutType = type => {
+const isValidCalloutType = (type: string) => {
   return ['note', 'warning', 'info', 'danger'].includes(type);
 };
