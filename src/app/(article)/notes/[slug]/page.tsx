@@ -58,7 +58,7 @@ export default async function Note({ params }: Params) {
   return (
     <div className="relative">
       <aside className="hidden xl:block">
-        <div className="xl:fixed xl:right-[calc(60vw-640px-8rem)] xl:top-[100px] xl:w-56">
+        <div className="fixed right-[calc((100vw-1280px)/2+2rem)] top-[100px] w-56">
           <TableOfContents headings={headings} />
         </div>
       </aside>
