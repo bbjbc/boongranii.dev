@@ -15,9 +15,9 @@ date: 2025-01-28
 
 [next-themes](https://ui.shadcn.com/docs/dark-mode/next)를 사용해서 다크모드를 구현하고 있었다.
 
-![image2](./image2.webp)
+![다크모드를 구현하며 발생한 보기 싫은 에러](./image2.webp)
 
-갑자기 대문짝만한 에러가 발생했다; 매우 당황.
+갑자기 대문짝만한 에러가 발생했다. 매우 당황.
 
 next-themes를 사용해 다크모드를 구현할 때 다음(혹은 위)과 같은 hydration 에러가 발생할 수 있다.
 
@@ -29,7 +29,7 @@ Uncaught Error: Hydration failed because the initial UI does not match what was 
 
 ## 3. 발생 원인
 
-![image3](./image3.webp)
+![hydration을 시각화한 그림](./image3.webp)
 
 발생 원인은 **간단하게 말해서 렌더링하려는 것의 불일치** 때문이다.
 

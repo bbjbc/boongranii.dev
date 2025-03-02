@@ -1,10 +1,6 @@
-import Image from 'next/image';
-
 import type { MDXComponents } from 'mdx/types';
-import Pre from './pre';
-import Heading from './heading';
-import Callout from './callout';
-import { getImageMetadata } from '@/utils/image-metadata';
+
+import { Pre, Heading, Callout, Figure } from '.';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -76,20 +72,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </blockquote>
     ),
     img: async ({ src, alt, ...props }) => {
-      const metadata = await getImageMetadata(src, 640);
-
-      return (
-        <Image
-          src={metadata.src}
-          alt={alt}
-          width={metadata.width}
-          height={metadata.height}
-          className="mb-8 w-full rounded-md shadow-lg dark:shadow-gray-800"
-          placeholder="blur"
-          blurDataURL={metadata.blurDataURL}
-          {...props}
-        />
-      );
+      return <Figure src={src} alt={alt} {...props} />;
     },
     hr: props => (
       <hr className="my-6 border-gray-300 dark:border-gray-600" {...props} />
