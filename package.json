@@ -7,7 +7,8 @@
     "build": "next build",
     "build:velite": "velite",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
