@@ -44,15 +44,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </a>
     ),
     ul: ({ children, ...props }) => (
-      <ul className="mb-2 ml-4 list-inside list-disc leading-loose" {...props}>
+      <ul className="mb-2 list-inside list-disc leading-loose" {...props}>
         {children}
       </ul>
     ),
     ol: ({ children, ...props }) => (
-      <ol
-        className="mb-2 ml-4 list-inside list-decimal leading-loose"
-        {...props}
-      >
+      <ol className="mb-2 list-inside list-decimal leading-loose" {...props}>
         {children}
       </ol>
     ),
