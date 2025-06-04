@@ -8,16 +8,24 @@ import mediumZoom, { Zoom, ZoomOptions } from 'medium-zoom';
 import { cn } from '@/utils/cn';
 
 interface ImageZoomProps extends ImageProps {
-  options?: ZoomOptions;
+  zoomOptions?: ZoomOptions;
   children?: React.ReactNode;
 }
 
-const ImageZoom = ({ options, children, ...imageProps }: ImageZoomProps) => {
+const options: ZoomOptions = {
+  background: 'rgba(0, 0, 0, 0.8)',
+};
+
+const ImageZoom = ({
+  zoomOptions = options,
+  children,
+  ...imageProps
+}: ImageZoomProps) => {
   const zoomRef = useRef<Zoom | null>(null);
 
   const getZoom = () => {
     if (zoomRef.current === null) {
-      zoomRef.current = mediumZoom(options);
+      zoomRef.current = mediumZoom(zoomOptions);
     }
 
     return zoomRef.current;
