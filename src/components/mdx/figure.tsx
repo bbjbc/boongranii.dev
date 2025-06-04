@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import { ImageProps } from 'next/image';
 
 import { getImageMetadata } from '@/utils/image-metadata';
+import ImageZoom from './image-zoom';
 
 interface FigureProps extends Omit<ImageProps, 'src'> {
   src: string;
@@ -13,12 +13,11 @@ const Figure = async ({ src, alt, ...props }: FigureProps) => {
 
   return (
     <>
-      <Image
+      <ImageZoom
         src={metadata.src}
         alt={alt || ''}
         width={metadata.width}
         height={metadata.height}
-        className="w-full rounded-md shadow-lg dark:shadow-gray-800"
         placeholder="blur"
         blurDataURL={metadata.blurDataURL}
         {...props}
