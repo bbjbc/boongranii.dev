@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { getSortedNotes } from '@/data/data-accessor';
 import { MDXContent } from '@/components/mdx/mdx-content';
 import { extractHeadings } from '@/utils/extract-headings';
 import { getImageMetadata } from '@/utils/image-metadata';
+import { Figure } from '@/components/mdx';
 import TableOfContents from '@/components/toc';
 import Title from '@/components/title';
 import ArticleMetadata from '@/components/(article)/article-metadata';
@@ -74,14 +74,15 @@ export default async function Note({ params }: Params) {
         </div>
 
         {imgMetadata && (
-          <Image
+          <Figure
             src={imgMetadata.src}
             alt={note.title}
             width={imgMetadata.width}
             height={imgMetadata.height}
-            className="mb-8 w-full rounded-md shadow-lg dark:shadow-gray-800"
+            className="mb-8"
             placeholder="blur"
             blurDataURL={imgMetadata.blurDataURL}
+            showCaption={false}
           />
         )}
         <MDXContent code={note.code} />

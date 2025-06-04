@@ -6,9 +6,15 @@ import ImageZoom from './image-zoom';
 interface FigureProps extends Omit<ImageProps, 'src'> {
   src: string;
   alt: string;
+  showCaption?: boolean;
 }
 
-const Figure = async ({ src, alt, ...props }: FigureProps) => {
+const Figure = async ({
+  src,
+  alt,
+  showCaption = true,
+  ...props
+}: FigureProps) => {
   const metadata = await getImageMetadata(src, 640);
 
   return (
@@ -22,7 +28,7 @@ const Figure = async ({ src, alt, ...props }: FigureProps) => {
         blurDataURL={metadata.blurDataURL}
         {...props}
       />
-      {alt && (
+      {alt && showCaption && (
         <span className="mb-6 mt-2 block text-center text-sm text-gray-400">
           {alt}
         </span>
