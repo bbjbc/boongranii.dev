@@ -2,7 +2,7 @@ import { VscGithubAlt } from 'react-icons/vsc';
 import { FaLinkedin } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 
-import Button from '../button';
+import Button from '../ui/button';
 import { GITHUB_URL, LINKEDIN_URL, GMAIL_URL } from '@/constants/path';
 
 const SocialLinks = () => {

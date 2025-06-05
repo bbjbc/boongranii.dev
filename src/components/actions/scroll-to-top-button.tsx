@@ -1,6 +1,6 @@
 import { LuArrowUpToLine } from 'react-icons/lu';
 
-import Button from '../button';
+import Button from '../ui/button';
 import type { ICommonButton } from '@/types/common-button';
 
 const ScrollToTopBUtton = ({ size, className }: ICommonButton) => {

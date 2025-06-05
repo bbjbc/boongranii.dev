@@ -5,12 +5,12 @@ import { MDXContent } from '@/components/mdx/mdx-content';
 import { extractHeadings } from '@/utils/extract-headings';
 import { getImageMetadata } from '@/utils/image-metadata';
 import { Figure } from '@/components/mdx';
-import TableOfContents from '@/components/toc';
-import Title from '@/components/title';
+import TableOfContents from '@/components/ui/toc';
+import Title from '@/components/ui/title';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
 import Giscus from '@/components/(article)/giscus';
-import FloatingButton from '@/components/common/floating-button';
+import FloatingButton from '@/components/actions/floating-button';
 
 interface Params {
   params: Promise<{ slug: string }>;

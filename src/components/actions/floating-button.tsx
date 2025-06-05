@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react';
 
 import { LuShipWheel } from 'react-icons/lu';
 
-import Button from '../button';
+import Button from '../ui/button';
 import BackButton from './back-button';
 import CopyLinkButton from './copy-link-button';
 import ScrollToTopButton from './scroll-to-top-button';

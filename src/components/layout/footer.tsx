@@ -3,7 +3,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
 
 import { GITHUB_URL, GMAIL_URL, LINKEDIN_URL } from '@/constants/path';
-import Button from '../button';
+import Button from '../ui/button';
 
 const Footer = () => {
   return (

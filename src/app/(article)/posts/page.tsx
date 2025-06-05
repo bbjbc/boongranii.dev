@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import { getSortedPosts } from '@/data/data-accessor';
-import Title from '@/components/title';
+import Title from '@/components/ui/title';
 import PostItem from '@/components/(article)/post-item';
 
 export const metadata: Metadata = {

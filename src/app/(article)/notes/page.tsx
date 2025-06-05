@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import { getSortedNotes } from '@/data/data-accessor';
-import Title from '@/components/title';
+import Title from '@/components/ui/title';
 import NoteItem from '@/components/(article)/note-item';
 
 export const metadata: Metadata = {

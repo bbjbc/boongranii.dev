@@ -2,10 +2,10 @@
 
 import { useHeadingObserver } from '@/hooks/use-heading-observer';
 import { cn } from '@/utils/cn';
-import ScrollToTopButton from './common/scroll-to-top-button';
-import CopyLinkButton from './common/copy-link-button';
-import BackButton from './common/back-button';
-import ScrollToCommentButton from './common/scroll-to-comment-button';
+import ScrollToTopButton from '../actions/scroll-to-top-button';
+import CopyLinkButton from '../actions/copy-link-button';
+import BackButton from '../actions/back-button';
+import ScrollToCommentButton from '../actions/scroll-to-comment-button';
 
 interface TOCItem {
   id: string;

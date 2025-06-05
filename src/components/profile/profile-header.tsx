@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Title from '../title';
+import Title from '../ui/title';
 import SocialLinks from './social-links';
 import aboutImg from '@/assets/about.jpg';
 

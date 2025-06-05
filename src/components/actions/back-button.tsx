@@ -1,6 +1,6 @@
 import { TbArrowBackUp } from 'react-icons/tb';
 
-import Button from '../button';
+import Button from '../ui/button';
 import { ICommonButton } from '@/types/common-button';
 
 const BackButton = ({ size, className }: ICommonButton) => {

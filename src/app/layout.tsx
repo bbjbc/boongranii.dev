@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from 'sonner';
 
 import '../styles/globals.css';
 import NavBar from '@/components/layout/nav-bar';
 import Footer from '@/components/layout/footer';
-import GoogleAnalytics from '@/components/common/google-analytics';
-import { BLOG_URL } from '@/constants/path';
+import GoogleAnalytics from '@/lib/google-analytics';
 import opengraphImg from '@/assets/opengraph-image.png';
+import { BLOG_URL } from '@/constants/path';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',

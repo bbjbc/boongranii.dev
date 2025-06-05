@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import ThemeToggle from '../common/theme-toggle';
+import ThemeToggle from '../actions/theme-toggle';
 import { ROUTER_PATH } from '../../constants/path';
 import { cn } from '@/utils/cn';
 

@@ -1,7 +1,7 @@
 import { IoCopyOutline } from 'react-icons/io5';
 import { toast } from 'sonner';
 
-import Button from '../button';
+import Button from '../ui/button';
 import { ICommonButton } from '@/types/common-button';
 
 const CopyLinkButton = ({ size, className }: ICommonButton) => {

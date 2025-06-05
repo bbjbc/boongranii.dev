@@ -1,6 +1,6 @@
 import { TbError404 } from 'react-icons/tb';
 
-import Title from '@/components/title';
+import Title from '@/components/ui/title';
 
 export default function NotFound() {
   return (

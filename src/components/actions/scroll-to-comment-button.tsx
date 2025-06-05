@@ -1,6 +1,6 @@
 import { BsChatText } from 'react-icons/bs';
 
-import Button from '../button';
+import Button from '../ui/button';
 import { ICommonButton } from '@/types/common-button';
 
 const ScrollToCommentButton = ({ size, className }: ICommonButton) => {
