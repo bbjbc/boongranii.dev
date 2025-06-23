@@ -67,7 +67,7 @@ export default function RootLayout({
             }}
           />
           <NavBar />
-          <main className="container flex-1 break-keep leading-relaxed text-gray-600 dark:text-gray-300">
+          <main className="container flex-1 break-keep pt-20 leading-relaxed text-gray-600 dark:text-gray-300">
             <article className="py-7">{children}</article>
           </main>
           <Footer />
