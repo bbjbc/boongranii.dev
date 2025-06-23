@@ -21,6 +21,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999 !important;
+}
+
 .shiki {
   border: 1px solid #d1d5db;
   overflow: auto;
