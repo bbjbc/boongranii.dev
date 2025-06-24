@@ -11,6 +11,7 @@ import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
 import Giscus from '@/components/(article)/giscus';
 import FloatingButton from '@/components/actions/floating-button';
+import opengraphImg from '@/assets/opengraph-image.png';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Params) {
       title: note.title,
       siteName: 'Boongranii',
       images: {
-        url: note.image?.src,
+        url: note.image?.src || opengraphImg.src,
       },
       type: 'article',
     },
