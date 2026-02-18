@@ -51,7 +51,7 @@ date: 2026-02-18
 export const calculateKDE = (
   data: number[],
   bandwidth?: number,
-  samplePoints: number = 200,
+  samplePoints: number = 150,
 ): KDEPoint[] => {
   const h = bandwidth ?? calculateBandwidth(data);
 
@@ -180,7 +180,7 @@ const avgBandwidth =
 const padding = avgBandwidth * 3;
 const xMin = Math.max(0, globalMin - padding);
 const xMax = globalMax + padding;
-const samplePoints = 200;
+const samplePoints = 150;
 const step = (xMax - xMin) / samplePoints;
 
 const commonXPoints: number[] = [];
