@@ -18,8 +18,7 @@ const Footer = () => {
           Boongranii
         </h3>
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          Where code meets creativity, <br />
-          experiences come alive.
+          Gotta do what you gotta do.
         </p>
       </div>
 
@@ -43,7 +42,7 @@ const Footer = () => {
         </div>
 
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          &copy; 2025 Boongranii. All rights reserved.
+          &copy; {new Date().getFullYear()} Boongranii. All rights reserved.
         </p>
       </div>
     </footer>

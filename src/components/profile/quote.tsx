@@ -10,7 +10,9 @@ const Quote = ({ text, translation, author }: QuoteProps) => {
       <strong className="font-serif text-lg font-semibold italic tracking-tight">
         &quot;{text}&quot;
       </strong>
-      <p className="mt-3 text-gray-600 dark:text-gray-300">{translation}</p>
+      <p className="mt-3 whitespace-pre-line text-gray-600 dark:text-gray-300">
+        {translation}
+      </p>
       <div className="text-right">
         <span className="text-sm text-gray-500 dark:text-gray-400">
           - by {author}
