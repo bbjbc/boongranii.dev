@@ -1,8 +1,7 @@
-import { Metadata } from 'next';
-
-import { getSortedPosts } from '@/data/data-accessor';
-import Title from '@/components/ui/title';
+import type { Metadata } from 'next';
 import PostItem from '@/components/(article)/post-item';
+import Title from '@/components/ui/title';
+import { getSortedPosts } from '@/data/data-accessor';
 
 export const metadata: Metadata = {
   title: '느린 생각, 긴 기록',

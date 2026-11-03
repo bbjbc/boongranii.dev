@@ -1,9 +1,8 @@
-import { VscGithubAlt } from 'react-icons/vsc';
-import { FaLinkedin } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
-
+import { FaLinkedin } from 'react-icons/fa';
+import { VscGithubAlt } from 'react-icons/vsc';
+import { GITHUB_URL, GMAIL_URL, LINKEDIN_URL } from '@/constants/path';
 import Button from '../ui/button';
-import { GITHUB_URL, LINKEDIN_URL, GMAIL_URL } from '@/constants/path';
 
 const SocialLinks = () => {
   return (

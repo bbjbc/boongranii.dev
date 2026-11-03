@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 import { useTheme } from 'next-themes';
-import { IoSunnyOutline, IoMoonOutline } from 'react-icons/io5';
+import { useEffect, useState } from 'react';
+import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
 
 import Button from '../ui/button';
 

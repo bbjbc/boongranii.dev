@@ -2,11 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-import ThemeToggle from '../actions/theme-toggle';
-import { ROUTER_PATH } from '../../constants/path';
-import { cn } from '@/utils/cn';
 import { useScrollVisibility } from '@/hooks/use-scroll-visibility';
+import { cn } from '@/utils/cn';
+import { ROUTER_PATH } from '../../constants/path';
+import ThemeToggle from '../actions/theme-toggle';
 
 const links = [
   { label: ROUTER_PATH.HOME.LABEL, path: ROUTER_PATH.HOME.PATH },
@@ -29,7 +28,7 @@ const NavBar = () => {
   return (
     <nav
       className={cn(
-        'fixed left-0 right-0 top-0 z-[1] bg-white/80 px-4 backdrop-blur-md transition-transform duration-300 dark:bg-[#212121]/80',
+        'fixed top-0 right-0 left-0 z-[1] bg-white/80 px-4 backdrop-blur-md transition-transform duration-300 dark:bg-[#212121]/80',
         isVisible ? 'translate-y-0' : '-translate-y-full',
       )}
     >

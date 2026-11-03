@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-
 import { useTheme } from 'next-themes';
+import { useEffect, useRef } from 'react';
 
 const repositoryName = process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_NAME || '';
 const repositoryId = process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID || '';

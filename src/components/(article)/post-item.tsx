@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 import type { Post as TPost } from '~content';
-import ArticleThumbnail from './article-thumbnail';
 import ArticleMetadata from './article-metadata';
+import ArticleThumbnail from './article-thumbnail';
 
 const PostItem = ({ post }: { post: TPost }) => {
   return (

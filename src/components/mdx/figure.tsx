@@ -1,4 +1,4 @@
-import { ImageProps } from 'next/image';
+import type { ImageProps } from 'next/image';
 
 import { getImageMetadata } from '@/utils/image-metadata';
 import ImageZoom from './image-zoom';
@@ -29,7 +29,7 @@ const Figure = async ({
         {...props}
       />
       {alt && showCaption && (
-        <span className="mb-6 mt-2 block text-center text-sm text-gray-400">
+        <span className="mt-2 mb-6 block text-center text-sm text-gray-400">
           {alt}
         </span>
       )}

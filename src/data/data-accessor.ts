@@ -1,4 +1,4 @@
-import { type Post, type Note, posts, notes } from '~content';
+import { type Note, notes, type Post, posts } from '~content';
 
 export const getSortedPosts = (): Post[] => {
   return posts.sort(

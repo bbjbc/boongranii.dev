@@ -1,8 +1,7 @@
-import { Metadata } from 'next';
-
-import { getSortedNotes } from '@/data/data-accessor';
-import Title from '@/components/ui/title';
+import type { Metadata } from 'next';
 import NoteItem from '@/components/(article)/note-item';
+import Title from '@/components/ui/title';
+import { getSortedNotes } from '@/data/data-accessor';
 
 export const metadata: Metadata = {
   title: '스치는 기록들',

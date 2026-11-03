@@ -1,6 +1,6 @@
-import { defineConfig, s } from 'velite';
 import rehypeShiki from '@shikijs/rehype';
 import remarkDirective from 'remark-directive';
+import { defineConfig, s } from 'velite';
 
 import { remarkCallout } from '@/lib/remark-callout';
 

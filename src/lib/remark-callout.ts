@@ -1,4 +1,4 @@
-import { Root } from 'mdast';
+import type { Root } from 'mdast';
 import { visit } from 'unist-util-visit';
 
 export const remarkCallout = () => {
@@ -13,7 +13,8 @@ export const remarkCallout = () => {
           return;
         }
 
-        const data = node.data || (node.data = {});
+        node.data ??= {};
+        const data = node.data;
         const attributes = node.attributes || {};
 
         const type = node.name;

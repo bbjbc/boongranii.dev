@@ -1,16 +1,15 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 import { LuShipWheel } from 'react-icons/lu';
-
+import { useOutsideClick } from '@/hooks/use-outside-click';
+import { cn } from '@/utils/cn';
 import Button from '../ui/button';
 import BackButton from './back-button';
 import CopyLinkButton from './copy-link-button';
-import ScrollToTopButton from './scroll-to-top-button';
 import ScrollToCommentButton from './scroll-to-comment-button';
-import { useOutsideClick } from '@/hooks/use-outside-click';
-import { cn } from '@/utils/cn';
+import ScrollToTopButton from './scroll-to-top-button';
 
 const FloatingButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +27,7 @@ const FloatingButton = () => {
   const containerRef = useOutsideClick<HTMLDivElement>(handleClose);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 xl:hidden" ref={containerRef}>
+    <div className="fixed right-4 bottom-4 z-50 xl:hidden" ref={containerRef}>
       <div
         className={cn(
           'mb-2 flex flex-col gap-2 transition-all duration-200',

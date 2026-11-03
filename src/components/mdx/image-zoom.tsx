@@ -1,9 +1,8 @@
 'use client';
 
-import Image, { ImageProps } from 'next/image';
-import { RefCallback, useRef } from 'react';
-
-import mediumZoom, { Zoom, ZoomOptions } from 'medium-zoom';
+import mediumZoom, { type Zoom, type ZoomOptions } from 'medium-zoom';
+import Image, { type ImageProps } from 'next/image';
+import { type RefCallback, useRef } from 'react';
 
 import { cn } from '@/utils/cn';
 

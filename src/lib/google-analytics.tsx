@@ -15,10 +15,7 @@ const GoogleAnalytics = ({ gaId }: GoogleAnalyticsProps) => {
   return (
     <>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
-      <Script
-        id="google-analytics"
-        dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }}
-      />
+      <Script id="google-analytics">{googleAnalyticsScript}</Script>
     </>
   );
 };

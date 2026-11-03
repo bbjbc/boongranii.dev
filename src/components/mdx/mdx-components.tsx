@@ -1,6 +1,6 @@
 import type { MDXComponents } from 'mdx/types';
 
-import { Pre, Heading, Callout, Figure } from '.';
+import { Callout, Figure, Heading, Pre } from '.';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -8,7 +8,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: ({ children }) => (
       <Heading
         as="h1"
-        className="mb-4 pt-10 text-2xl font-semibold text-black dark:text-white sm:text-3xl"
+        className="mb-4 pt-10 text-2xl font-semibold text-black sm:text-3xl dark:text-white"
       >
         {children}
       </Heading>
@@ -16,7 +16,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h2: ({ children }) => (
       <Heading
         as="h2"
-        className="mb-4 pt-10 text-xl font-semibold text-black dark:text-white sm:text-2xl"
+        className="mb-4 pt-10 text-xl font-semibold text-black sm:text-2xl dark:text-white"
       >
         {children}
       </Heading>
@@ -24,7 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h3: ({ children }) => (
       <Heading
         as="h3"
-        className="mb-4 pt-10 text-lg font-semibold text-black dark:text-white sm:text-xl"
+        className="mb-4 pt-10 text-lg font-semibold text-black sm:text-xl dark:text-white"
       >
         {children}
       </Heading>
@@ -62,7 +62,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre: props => <Pre {...props} />,
     blockquote: ({ children, ...props }) => (
       <blockquote
-        className="mb-4 border-l-4 border-gray-600 py-2 pl-4 italic text-black dark:border-gray-300 dark:text-white [&>p]:mb-0"
+        className="mb-4 border-l-4 border-gray-600 py-2 pl-4 text-black italic dark:border-gray-300 dark:text-white [&>p]:mb-0"
         {...props}
       >
         {children}

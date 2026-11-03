@@ -7,7 +7,7 @@ interface QuoteProps {
 const Quote = ({ text, translation, author }: QuoteProps) => {
   return (
     <div className="rounded-xl bg-gray-50 p-6 dark:bg-gray-800/50">
-      <strong className="font-serif text-lg font-semibold italic tracking-tight">
+      <strong className="font-serif text-lg font-semibold tracking-tight italic">
         &quot;{text}&quot;
       </strong>
       <p className="mt-3 whitespace-pre-line text-gray-600 dark:text-gray-300">

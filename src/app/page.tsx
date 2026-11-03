@@ -1,8 +1,7 @@
-import { Metadata } from 'next';
-
+import type { Metadata } from 'next';
+import AboutContent from '@/components/profile/about-content';
 import ProfileHeader from '@/components/profile/profile-header';
 import Quote from '@/components/profile/quote';
-import AboutContent from '@/components/profile/about-content';
 
 export const metadata: Metadata = {
   title: '반갑습니다. Boongranii입니다.',
@@ -21,7 +20,7 @@ export default function Home() {
     <main>
       <ProfileHeader
         name="Boongranii"
-        role="Software Engineer · Aspiring Thinker"
+        jobTitle="Software Engineer · Aspiring Thinker"
         description="도메인을 이해하고, 그 이해를 실제 소프트웨어로 연결하는 개발자입니다."
       />
 

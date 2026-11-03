@@ -2,10 +2,10 @@
 
 import { useHeadingObserver } from '@/hooks/use-heading-observer';
 import { cn } from '@/utils/cn';
-import ScrollToTopButton from '../actions/scroll-to-top-button';
-import CopyLinkButton from '../actions/copy-link-button';
 import BackButton from '../actions/back-button';
+import CopyLinkButton from '../actions/copy-link-button';
 import ScrollToCommentButton from '../actions/scroll-to-comment-button';
+import ScrollToTopButton from '../actions/scroll-to-top-button';
 
 interface TOCItem {
   id: string;
@@ -25,7 +25,7 @@ const TableOfContents = ({ headings }: TOCProps) => {
     <div className="w-full space-y-2">
       {hasTOC && (
         <nav className="xl:border-l xl:border-gray-200 xl:px-3 xl:py-2 xl:dark:border-gray-700">
-          <p className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100 xl:text-sm">
+          <p className="mb-2 text-lg font-semibold text-gray-900 xl:text-sm dark:text-gray-100">
             On This Page
           </p>
           <ul className="space-y-2 text-sm">
@@ -39,6 +39,7 @@ const TableOfContents = ({ headings }: TOCProps) => {
                 )}
               >
                 <button
+                  type="button"
                   onClick={e => {
                     e.preventDefault();
                     handleClick(heading.id);

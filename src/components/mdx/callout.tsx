@@ -1,8 +1,8 @@
 import {
+  AiOutlineBulb,
+  AiOutlineClose,
   AiOutlineInfoCircle,
   AiOutlineWarning,
-  AiOutlineClose,
-  AiOutlineBulb,
 } from 'react-icons/ai';
 
 import { cn } from '@/utils/cn';

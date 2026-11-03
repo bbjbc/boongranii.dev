@@ -1,9 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-
-import { IoClipboardOutline } from 'react-icons/io5';
-import { IoCheckmarkDoneOutline } from 'react-icons/io5';
+import { IoCheckmarkDoneOutline, IoClipboardOutline } from 'react-icons/io5';
 import Button from '../ui/button';
 
 interface PreProps {
@@ -16,7 +14,7 @@ const Pre = ({ children, ...props }: PreProps) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async () => {
-    const text = preRef.current?.innerText;
+    const text = preRef.current?.textContent;
     await navigator.clipboard.writeText(text || '');
 
     setIsCopied(true);
@@ -38,7 +36,7 @@ const Pre = ({ children, ...props }: PreProps) => {
             <IoClipboardOutline />
           )
         }
-        className="absolute right-2 top-2 opacity-0 group-hover:opacity-100"
+        className="absolute top-2 right-2 opacity-0 group-hover:opacity-100"
       />
       <pre ref={preRef} {...props}>
         {children}

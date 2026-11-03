@@ -1,17 +1,16 @@
 import { notFound } from 'next/navigation';
-
-import { getSortedPosts } from '@/data/data-accessor';
-import { MDXContent } from '@/components/mdx/mdx-content';
-import { extractHeadings } from '@/utils/extract-headings';
-import { getImageMetadata } from '@/utils/image-metadata';
-import { Figure } from '@/components/mdx';
-import Title from '@/components/ui/title';
-import Description from '@/components/ui/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import ContentNavigation from '@/components/(article)/content-navigation';
 import Giscus from '@/components/(article)/giscus';
-import TableOfContents from '@/components/ui/toc';
 import FloatingButton from '@/components/actions/floating-button';
+import { Figure } from '@/components/mdx';
+import { MDXContent } from '@/components/mdx/mdx-content';
+import Description from '@/components/ui/description';
+import Title from '@/components/ui/title';
+import TableOfContents from '@/components/ui/toc';
+import { getSortedPosts } from '@/data/data-accessor';
+import { extractHeadings } from '@/utils/extract-headings';
+import { getImageMetadata } from '@/utils/image-metadata';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -61,7 +60,7 @@ export default async function Post({ params }: Params) {
   return (
     <div className="relative">
       <aside className="hidden xl:block">
-        <div className="fixed right-[calc((100vw-1280px)/2+2rem)] top-[100px] w-56">
+        <div className="fixed top-[100px] right-[calc((100vw-1280px)/2+2rem)] w-56">
           <TableOfContents headings={headings} />
         </div>
       </aside>

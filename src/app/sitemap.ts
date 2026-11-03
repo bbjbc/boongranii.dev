@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next';
-
-import { getSortedPosts, getSortedNotes } from '@/data/data-accessor';
-import { ROUTER_PATH, BLOG_URL } from '@/constants/path';
+import { BLOG_URL, ROUTER_PATH } from '@/constants/path';
+import { getSortedNotes, getSortedPosts } from '@/data/data-accessor';
 
 const lastModifiedPostDate = getSortedPosts()[0].date;
 const lastModifiedNoteDate = getSortedNotes()[0].date;
