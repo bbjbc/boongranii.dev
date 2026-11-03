@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="container py-14">
       <div className="relative mb-6">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent dark:hidden dark:via-gray-200" />
-        <div className="absolute inset-x-0 top-0 hidden h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:block" />
+        <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-gray-400 to-transparent dark:hidden dark:via-gray-200" />
+        <div className="absolute inset-x-0 top-0 hidden h-px bg-linear-to-r from-transparent via-gray-200 to-transparent dark:block" />
       </div>
 
       <div className="mb-6 flex flex-col space-y-1">
